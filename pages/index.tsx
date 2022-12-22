@@ -18,7 +18,7 @@ export default function Home() {
           ut
         </h4>
         <h4 className="text-slate-500 hover:text-slate-400 font-mono self-center absolute bottom-2 cursor-pointer">
-          <Link href="/skills">- let's to my skills -</Link>
+          <Link href="/skills">&#8594; let's to my skills &#8592;</Link>
         </h4>
       </main>
     </div>
