@@ -17,7 +17,7 @@ const Contacts = () => {
           <FiInstagram className="cursor-pointer  hover:text-emerald-400 hover:-translate-y-1 transition-all delay-100"/>
           <FiFacebook className="cursor-pointer  hover:text-emerald-400 hover:-translate-y-1 transition-all delay-100"/>
         </div>
-        <h4 className="text-slate-500 hover:text-slate-400 font-mono self-center absolute bottom-2 tracking-widest cursor-grab">&#8594; Happy Good Day &#8592;</h4>
+        <h4 className="text-slate-500 hover:text-slate-400 font-mono self-center absolute bottom-2 tracking-widest cursor-default">&#8594; Happy Good Day &#8592;</h4>
       </main>
     </div>
   );

@@ -29,7 +29,7 @@ const skills = () => {
           </ul>
         </section>
         <h4 className="text-slate-500 hover:text-slate-400 font-mono self-center absolute bottom-2 cursor-pointer">
-          <Link href="/contacts">&#8594; let's to my contact &#8592;</Link>
+          <Link href="/contacts">&#8594; <span className="underline underline-offset-4">let's to my contact</span> &#8592;</Link>
         </h4>
       </main>
     </div>
