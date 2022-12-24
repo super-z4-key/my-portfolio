@@ -5,7 +5,7 @@ import Hamburger from "./Hamburger";
 import { RoutePath } from "../db/RoutePath";
 
 type Props = {
-  buttonHandleNav: any;
+  buttonHandleNav: (event: React.MouseEvent<HTMLDivElement>) => void;
   handleNavValue: boolean;
 };
 

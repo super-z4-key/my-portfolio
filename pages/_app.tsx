@@ -6,7 +6,7 @@ import { useState } from "react";
 
 export default function App({ Component, pageProps }: AppProps) {
   const [handleNav, setHandleNav] = useState(false);
-  const buttonHandleNav = () => {
+  const buttonHandleNav = (): void => {
     setHandleNav(!handleNav);
   };
 
