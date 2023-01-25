@@ -1,49 +1,52 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { RoutePath } from "../db/RoutePath";
-import Hamburger from "./Hamburger";
 
-type Props = {
-  buttonHandleNav: Function;
-  handleNavValue: boolean;
-};
-
-const Navbar = (props: Props) => {
+const Navbar = () => {
   const router = useRouter();
+  const _MenuItems = [
+    {
+      label: "Home",
+      url: "/#",
+    },
+    {
+      label: "About Me",
+      url: "/#about-me",
+    },
+    {
+      label: "Skills",
+      url: "/#skills",
+    },
+    {
+      label: "Contact",
+      url: "/#contact",
+    },
+  ];
+
   return (
-    <div className="w-full h-[10%] flex justify-between items-center px-4 bg-slate-900 z-10 relative">
-      <div className="text-emerald-400 md:ml-5 text-2xl font-mono cursor-default">SUPER'Z</div>
-      <div className="h-full w-full flex md:hidden justify-end items-center">
-        <Hamburger
-          bgHamburger={
-            props.handleNavValue
-              ? "bg-transparent transition-all duration-500"
-              : "bg-slate-300 transition-all duration-1000 delay-500"
-          }
-          buttonHandleNav={props.buttonHandleNav}
-          widthOne="w-[25px]"
-          widthSecond="w-[25px]"
-          widthThird="w-[25px]"
-        />
-      </div>
-      <ul className="hidden md:flex justify-beetwen gap-16 mr-5">
-        {RoutePath.map((data, index) => {
-          return (
-            <li key={index}>
-              <Link
-                href={data.path}
-                className={
-                  router.pathname === data.path
-                    ? "text-emerald-400 font-mono tracking-widest"
-                    : "text-slate-300  font-mono tracking-widest"
-                }
-              >
-                {data.title}
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
+    <div className="fixed mx-auto w-full h-auto hidden md:block pt-3 backdrop-blur-sm bg-slate-900/90">
+      <nav className="container mx-auto w-full py-2 md:flex justify-between items-center px-4">
+        <div className="text-emerald-400 text-2xl font-bold cursor-default">
+          Z
+        </div>
+        <ul className="hidden md:flex justify-beetwen gap-14">
+          {_MenuItems.map((item, index) => {
+            return (
+              <li key={index}>
+                <Link
+                  href={item.url}
+                  className={
+                    router.asPath === item.url
+                      ? "text-emerald-400 tracking-widest"
+                      : "text-slate-300 tracking-widest"
+                  }
+                >
+                  {item.label}
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+      </nav>
     </div>
   );
 };

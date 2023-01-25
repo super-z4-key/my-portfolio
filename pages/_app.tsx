@@ -1,22 +1,16 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import Navbar from "../components/Navbar";
-import Sidebar from "../components/Sidebar";
-import { useState } from "react";
+import Footer from "../components/Footer";
 
 export default function App({ Component, pageProps }: AppProps) {
-  const [handleNav, setHandleNav] = useState(false);
-  const buttonHandleNav = (): void => {
-    setHandleNav(!handleNav);
-  };
-
   return (
-    <div className="container-none w-full h-[100vh] bg-slate-900 overflow-hidden relative">
-      <Navbar buttonHandleNav={buttonHandleNav} handleNavValue={handleNav} />
-      <Sidebar buttonHandleNav={buttonHandleNav} handleNavValue={handleNav} />
-      <div className="h-[90%] w-full border-slate-500">
+    <div className="container-none h-auto w-full box-border bg-slate-900">
+      <Navbar />
+      <div className="container-none w-full h-auto">
         <Component {...pageProps} />
       </div>
+      <Footer />
     </div>
   );
 }
