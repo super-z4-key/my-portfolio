@@ -28,7 +28,7 @@ const ContactsPage = () => {
             <div className="text-slate-500 mt-4 mb-10 md:flex md:flex-col md:justify-center md:items-center text-2xl">
               <RiSendPlaneLine className="text-3xl cursor-pointer hover:text-slate-400" />
               <p>Email:</p>
-              <div className="inline-flex md:flex-col md:items-center gap-2">
+              <div className="flex flex-wrap md:flex-col md:items-center gap-2">
                 <p className="text-slate-400">emailemailemail@gmail.com</p>
                 <div>
                   <AiOutlineCopy className="text-3xl cursor-pointer hover:text-slate-400" />
