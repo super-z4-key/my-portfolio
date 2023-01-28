@@ -1,6 +1,7 @@
 import React from "react";
 import { BsDownload } from "react-icons/bs";
 import { TfiEmail } from "react-icons/tfi";
+import { RiSendPlaneLine } from "react-icons/ri";
 
 const Email = () => {
   return (
@@ -13,7 +14,7 @@ const Email = () => {
         <p className="text-slate-500 border-slate-500 rounded-lg px-1 text-lg md:text-2xl">
           let's go to my cv
         </p>
-        <BsDownload className="my-auto py-1 text-slate-500 text-2xl md:text-3xl cursor-pointer hover:text-slate-400" />
+        <RiSendPlaneLine className="my-auto py-1 text-slate-500 text-xl md:text-3xl cursor-pointer hover:text-slate-400" />
       </section>
     </div>
   );
