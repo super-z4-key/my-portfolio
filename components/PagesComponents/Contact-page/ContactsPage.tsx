@@ -1,13 +1,13 @@
 import Link from "next/link";
-import React, { useState } from "react";
+import { useState } from "react";
 import { RiSendPlaneLine } from "react-icons/ri";
 import { AiOutlineCopy } from "react-icons/ai";
 import { BsWhatsapp, BsFillFileArrowUpFill } from "react-icons/bs";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 
 const ContactsPage = () => {
-  const [copied, setCopied] = useState(false);
   const email = "emailemailemail@gmail.com";
+  const [copied, setCopied] = useState(false);
   const handleCopy = () => {
     setCopied(true);
     setTimeout(() => {
@@ -27,7 +27,7 @@ const ContactsPage = () => {
             <br className="md:hidden" />
             my contacts
           </p>
-          <section className="md:flex justify-center items-center md:gap-16 text-2xl md:my-5">
+          <section className="md:flex justify-center items-center md:gap-16 text-2xl md:my-5 ">
             <div className="inline-flex text-slate-500 border border-slate-500 py-2 px-4 rounded-xl gap-3 my-2">
               <div>
                 <BsWhatsapp className="text-3xl cursor-pointer hover:text-slate-400" />
@@ -39,7 +39,7 @@ const ContactsPage = () => {
               <p>Email:</p>
               <div className="flex flex-wrap md:flex-col md:items-center gap-2">
                 <p className="text-slate-400">{email}</p>
-                <div className="relative ">
+                <div className=" relative">
                   <CopyToClipboard text={email}>
                     <AiOutlineCopy
                       onClick={handleCopy}
@@ -47,10 +47,12 @@ const ContactsPage = () => {
                     />
                   </CopyToClipboard>
                   {copied ? (
-                    <div className="text-slate-300/50 text-sm px-2 absolute -top-9 -left-8 md:left-10 md:top-0 border border-slate-500/50 rounded-lg bg-slate-800/50">
+                    <div className="absolute -top-10 -right-10 text-slate-300 text-sm px-2 mt-2  border-slate-500 rounded-lg bg-slate-800">
                       Copied!
                     </div>
-                  ) : null}
+                  ) : (
+                    ""
+                  )}
                 </div>
               </div>
             </div>
